@@ -1,1 +1,1 @@
-# -gat-disposable-test
+# gat-disposable-test
