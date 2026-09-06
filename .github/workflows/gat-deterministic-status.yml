@@ -1,0 +1,23 @@
+name: GAT Deterministic Status Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  deterministic-status:
+    name: gat-deterministic-status
+    runs-on: ubuntu-latest
+    steps:
+      - name: Emit deterministic proof
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected="GAT_STATUS_CHECK_AUTOMATION_001"
+          actual="GAT_STATUS_CHECK_AUTOMATION_001"
+          test "$actual" = "$expected"
+          echo "$actual"
