@@ -18,6 +18,6 @@ jobs:
         run: |
           set -euo pipefail
           expected="GAT_STATUS_CHECK_AUTOMATION_001"
-          actual="GAT_STATUS_CHECK_AUTOMATION_001"
+          actual="GAT_STATUS_CHECK_FAILURE_INJECTION"
           test "$actual" = "$expected"
           echo "$actual"
